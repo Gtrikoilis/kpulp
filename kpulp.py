@@ -220,7 +220,8 @@ def description_to_fields(description):
                 LOGGER.warn(
                     "Key {} already in dict with value: {} ({})".format(
                         new_key, event_dict[new_key]))
-            event_dict[new_key] = v
+            #timelion will be happy now :)           
+            event_dict[new_key.replace(" ","_")] = v
     return event_dict
 
 
